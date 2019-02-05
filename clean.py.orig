@@ -1,0 +1,50 @@
+#!/usr/bin/env python
+#! -*- encoding: utf-8 -*-
+
+
+# name:clean.py
+# date:2009-06-17 11:43:15.461151
+#
+# 
+# Time-stamp: " "
+#
+import sys
+import os
+import os.path
+
+
+"""
+globals
+
+"""
+debug = True
+
+stderr = sys.stderr
+stdout = sys.stdout
+
+def clean(arg, dirname, names):
+    for fn in names:
+        if fn[-1] == '~' or fn[-1].startswith('#'):
+            fp = os.path.join(dirname, fn)
+            print 'rm:', fp
+            os.remove(fp)
+            
+        
+def execute():
+    """
+    execute
+    
+    """
+    dirname = os.getcwd()
+    print 'clean', dirname
+    os.path.walk(dirname, clean, 'clean')
+
+    
+        
+
+if __name__ == '__main__':
+    """
+    main
+    
+    """
+    execute()

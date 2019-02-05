@@ -1,0 +1,28 @@
+#!/bin/sh
+
+#
+# tar.gz fy the folder
+#
+
+if [ -z $1 ] || [ ! -d $1 ] ; then
+   echo 'please input directory'
+   exit
+fi 
+dirname=$1
+prefix=$1
+shift
+
+if [ ! -z $1 ] ; then
+    prefix=$1
+fi
+shift
+
+#pushd $1
+#clean
+#popd
+
+
+date=$(date +%y%m%d)
+fn=$prefix.$date.tar.gz
+
+tar cvzf $fn $dirname

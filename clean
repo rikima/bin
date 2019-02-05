@@ -1,0 +1,26 @@
+#!/bin/sh
+
+#
+# *~¤ò¾Ã¤¹
+#
+
+#echo "clean .."
+#ls  $(pwd)/*~ $(pwd)/#* $(pwd)/.#* $(pwd)/.#*
+#rm $(pwd)/*~ $(pwd)/#* $(pwd)/.#* $(pwd)/.#*
+
+#files=$(ls)
+#
+#for f in ${files[@]} ; do
+#    
+#    #if [ -f $f ] && [ ! -s $f ] ; then
+#    if [ -f $f ] ; then
+#		echo "rm $f ..."
+#	rm $f
+#    fi
+#    
+#    #
+#
+#done
+#echo " done"
+
+clean.py
